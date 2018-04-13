@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.sdbmtsample.web.store.StoreBrowse"
+        focusComponent="storesTable"
+        lookupComponent="storesTable"
+        messagesPack="com.company.sdbmtsample.web.store">
+    <dsContext>
+        <groupDatasource id="storesDs"
+                         class="com.company.sdbmtsample.entity.Store"
+                         view="_local">
+            <query>
+                <![CDATA[select e from sdbmtsample$Store e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="storesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="storesTable"
+                datasource="storesDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="storesTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="tenantId"/>
+                <column id="name"/>
+                <column id="address"/>
+            </columns>
+            <rows datasource="storesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="storesTable.create"/>
+                <button id="editBtn"
+                        action="storesTable.edit"/>
+                <button id="removeBtn"
+                        action="storesTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>
