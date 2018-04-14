@@ -15,7 +15,7 @@ The following users are created:
 | login     | password    | descipriton |
 | --------|---------|-------|
 | admin  | admin   | Global admin. Has access to everything in the system without restrictions. Can view tenant-specific data as well.    |
-| walmart_admin | admin | Admin of the first tenant. Has access to administration menu, but doesn't have access to some low-level functionality, such as application log etc. Can only view data of the same tenant.    |
+| walmart_admin | admin | Admin of the first tenant. Has access to administration menu, but doesn't have access to some low-level functionality, such as server log, JMX console etc. Can only view data of the same tenant.    |
 | walmart_user | admin | User of the first tenant, created by *walmart_admin*. Access is restricted even further by *walmart_admin* with a tenant-specifc role.    |
 | costco_admin | admin | Admin of the second tenant.    |
 
