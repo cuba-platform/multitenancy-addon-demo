@@ -44,7 +44,7 @@ cuba {
 
 dependencies {
     appComponent("com.haulmont.cuba:cuba-global:$cubaVersion")
-    appComponent("com.haulmont.addon.sdbmt:sdbmt-global:0.7-SNAPSHOT")
+    appComponent("com.haulmont.addon.sdbmt:sdbmt-global:0.7")
 
 }
 
