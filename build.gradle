@@ -1,6 +1,6 @@
 
 buildscript {
-    ext.cubaVersion = '6.7.12'
+    ext.cubaVersion = '6.9.3'
     repositories {
         
         mavenLocal()
@@ -33,7 +33,7 @@ apply(plugin: 'cuba')
 
 cuba {
     artifact {
-        group = 'com.company.sdbmtsample'
+        group = 'com.haulmont.sdbmtsample'
         version = '0.1'
         isSnapshot = true
     }
@@ -44,7 +44,7 @@ cuba {
 
 dependencies {
     appComponent("com.haulmont.cuba:cuba-global:$cubaVersion")
-    appComponent("com.haulmont.addon.sdbmt:sdbmt-global:0.7")
+    appComponent("com.haulmont.addon.sdbmt:sdbmt-global:1.1.0")
 
 }
 
@@ -132,7 +132,7 @@ configure(guiModule) {
 
     task deployConf(type: Copy) {
         from file('src')
-        include "com/company/sdbmtsample/**"
+        include "com/haulmont/sdbmtsample/**"
         into "$cuba.tomcat.dir/conf/${modulePrefix}"
     }
 }
@@ -160,7 +160,7 @@ configure(webModule) {
 
     task deployConf(type: Copy) {
         from file('src')
-        include "com/company/sdbmtsample/**"
+        include "com/haulmont/sdbmtsample/**"
         into "$cuba.tomcat.dir/conf/${modulePrefix}"
     }
 

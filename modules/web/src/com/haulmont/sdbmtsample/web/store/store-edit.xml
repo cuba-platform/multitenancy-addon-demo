@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.haulmont.sdbmtsample.web.store.StoreEdit"
+        datasource="storeDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.haulmont.sdbmtsample.web.store">
+    <dsContext>
+        <datasource id="storeDs"
+                    class="com.haulmont.sdbmtsample.entity.Store"
+                    view="_local"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="storeDs">
+            <column width="250px">
+                <field property="tenantId"/>
+                <field property="name"/>
+                <field property="address"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>
