@@ -2,19 +2,19 @@
 
 insert into SEC_GROUP
 (DTYPE, ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, PARENT_ID, TENANT_ID)
-values ('EXT', '3b13565c-f41d-5e72-83f5-2b69a7f9ef33', 2, '2018-04-13 15:01:36', 'admin', '2018-04-13 15:02:06', 'admin', null, null, 'Walmart', '0fa2b1a5-1d68-4d69-9fbd-dff348347f93', 'walmart');
+values ('cubasdbmt$TenantGroup', '3b13565c-f41d-5e72-83f5-2b69a7f9ef33', 2, '2018-04-13 15:01:36', 'admin', '2018-04-13 15:02:06', 'admin', null, null, 'Walmart', '0fa2b1a5-1d68-4d69-9fbd-dff348347f93', 'walmart');
 
 insert into SEC_GROUP
 (DTYPE, ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, PARENT_ID, TENANT_ID)
-values ('EXT', '1b132d20-48df-2708-5ee5-f7ff1133132a', 2, '2018-04-13 15:23:23', 'walmart_admin', '2018-04-13 15:23:37', 'walmart_admin', null, null, 'Management', '3b13565c-f41d-5e72-83f5-2b69a7f9ef33', 'walmart');
+values ('cubasdbmt$TenantGroup', '1b132d20-48df-2708-5ee5-f7ff1133132a', 2, '2018-04-13 15:23:23', 'walmart_admin', '2018-04-13 15:23:37', 'walmart_admin', null, null, 'Management', '3b13565c-f41d-5e72-83f5-2b69a7f9ef33', 'walmart');
 
 insert into SEC_GROUP
 (DTYPE, ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, PARENT_ID, TENANT_ID)
-values ('EXT', '0a9a5346-0d04-26e7-d22f-cd8fe82f966f', 1, '2018-04-13 15:23:18', 'walmart_admin', '2018-04-13 15:23:18', null, null, null, 'IT', '3b13565c-f41d-5e72-83f5-2b69a7f9ef33', 'walmart');
+values ('cubasdbmt$TenantGroup', '0a9a5346-0d04-26e7-d22f-cd8fe82f966f', 1, '2018-04-13 15:23:18', 'walmart_admin', '2018-04-13 15:23:18', null, null, null, 'IT', '3b13565c-f41d-5e72-83f5-2b69a7f9ef33', 'walmart');
 
 insert into SEC_GROUP
 (DTYPE, ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, PARENT_ID, TENANT_ID)
-values ('EXT', 'e5badf88-7d28-4d85-6281-f396bd7539ce', 2, '2018-04-13 15:02:26', 'admin', '2018-04-13 15:02:44', 'admin', null, null, 'Costco', '0fa2b1a5-1d68-4d69-9fbd-dff348347f93', 'costco');
+values ('cubasdbmt$TenantGroup', 'e5badf88-7d28-4d85-6281-f396bd7539ce', 2, '2018-04-13 15:02:26', 'admin', '2018-04-13 15:02:44', 'admin', null, null, 'Costco', '0fa2b1a5-1d68-4d69-9fbd-dff348347f93', 'costco');
 
 insert into SEC_ROLE
 (DTYPE, ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, LOC_NAME, DESCRIPTION, ROLE_TYPE, IS_DEFAULT_ROLE, TENANT_ID)
@@ -34,15 +34,15 @@ values ('fd8c3f7e-7c26-b76f-a7dc-29f5864c1640', 1, '2018-04-13 15:22:27', 'walma
 
 insert into SEC_USER
 (DTYPE, ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, LOGIN, LOGIN_LC, PASSWORD, NAME, FIRST_NAME, LAST_NAME, MIDDLE_NAME, POSITION_, EMAIL, LANGUAGE_, TIME_ZONE, TIME_ZONE_AUTO, ACTIVE, CHANGE_PASSWORD_AT_LOGON, GROUP_ID, IP_MASK, TENANT_ID)
-values ('EXT', '88d810c8-6a43-5d56-5b95-9ee310114008', 2, '2018-04-13 15:02:00', 'admin', '2018-04-13 15:02:06', 'admin', null, null, 'walmart_admin', 'walmart_admin', '2e9e562d79b5eb98431621c47516a70a3ef52108', null, null, null, null, null, null, 'en', null, null, true, false, '3b13565c-f41d-5e72-83f5-2b69a7f9ef33', null, 'walmart');
+values ('cubasdbmt$TenantUser', '88d810c8-6a43-5d56-5b95-9ee310114008', 2, '2018-04-13 15:02:00', 'admin', '2018-04-13 15:02:06', 'admin', null, null, 'walmart_admin', 'walmart_admin', '2e9e562d79b5eb98431621c47516a70a3ef52108', null, null, null, null, null, null, 'en', null, null, true, false, '3b13565c-f41d-5e72-83f5-2b69a7f9ef33', null, 'walmart');
 
 insert into SEC_USER
 (DTYPE, ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, LOGIN, LOGIN_LC, PASSWORD, NAME, FIRST_NAME, LAST_NAME, MIDDLE_NAME, POSITION_, EMAIL, LANGUAGE_, TIME_ZONE, TIME_ZONE_AUTO, ACTIVE, CHANGE_PASSWORD_AT_LOGON, GROUP_ID, IP_MASK, TENANT_ID)
-values ('EXT', 'be79a5ae-f46c-7ba3-6329-e5cac69201a0', 3, '2018-04-13 15:10:10', 'walmart_admin', '2018-04-13 15:23:56', 'walmart_admin', null, null, 'walmart_user', 'walmart_user', '89c92e4b16264701930d09ab3f9691005da6b60c', null, null, null, null, null, null, 'en', null, null, true, false, '1b132d20-48df-2708-5ee5-f7ff1133132a', null, 'walmart');
+values ('cubasdbmt$TenantUser', 'be79a5ae-f46c-7ba3-6329-e5cac69201a0', 3, '2018-04-13 15:10:10', 'walmart_admin', '2018-04-13 15:23:56', 'walmart_admin', null, null, 'walmart_user', 'walmart_user', '89c92e4b16264701930d09ab3f9691005da6b60c', null, null, null, null, null, null, 'en', null, null, true, false, '1b132d20-48df-2708-5ee5-f7ff1133132a', null, 'walmart');
 
 insert into SEC_USER
 (DTYPE, ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, LOGIN, LOGIN_LC, PASSWORD, NAME, FIRST_NAME, LAST_NAME, MIDDLE_NAME, POSITION_, EMAIL, LANGUAGE_, TIME_ZONE, TIME_ZONE_AUTO, ACTIVE, CHANGE_PASSWORD_AT_LOGON, GROUP_ID, IP_MASK, TENANT_ID)
-values ('EXT', 'a5ebb8af-3d2a-ead2-f665-61cc197c8cd6', 2, '2018-04-13 15:02:41', 'admin', '2018-04-13 15:02:44', 'admin', null, null, 'costco_admin', 'costco_admin', '816687c0fd6ce527dde2a217e3535f061e36f24e', null, null, null, null, null, null, 'en', null, null, true, false, 'e5badf88-7d28-4d85-6281-f396bd7539ce', null, 'costco');
+values ('cubasdbmt$TenantUser', 'a5ebb8af-3d2a-ead2-f665-61cc197c8cd6', 2, '2018-04-13 15:02:41', 'admin', '2018-04-13 15:02:44', 'admin', null, null, 'costco_admin', 'costco_admin', '816687c0fd6ce527dde2a217e3535f061e36f24e', null, null, null, null, null, null, 'en', null, null, true, false, 'e5badf88-7d28-4d85-6281-f396bd7539ce', null, 'costco');
 
 insert into SEC_USER_ROLE
 (DTYPE, ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, USER_ID, ROLE_ID, TENANT_ID)

@@ -16,16 +16,6 @@ create table SDBMTSAMPLE_STORE (
     primary key (ID)
 )^
 -- end SDBMTSAMPLE_STORE
--- begin SEC_GROUP
-alter table SEC_GROUP add column TENANT_ID varchar(255) ^
-alter table SEC_GROUP add column DTYPE varchar(100) ^
-update SEC_GROUP set DTYPE = 'EXT' where DTYPE is null ^
--- end SEC_GROUP
--- begin SEC_USER
-alter table SEC_USER add column TENANT_ID varchar(255) ^
-alter table SEC_USER add column DTYPE varchar(100) ^
-update SEC_USER set DTYPE = 'EXT' where DTYPE is null ^
--- end SEC_USER
 -- begin SEC_USER_ROLE
 alter table SEC_USER_ROLE add column TENANT_ID varchar(255) ^
 alter table SEC_USER_ROLE add column DTYPE varchar(100) ^

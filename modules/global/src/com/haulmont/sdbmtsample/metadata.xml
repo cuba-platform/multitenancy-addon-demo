@@ -2,6 +2,6 @@
 <metadata xmlns="http://schemas.haulmont.com/cuba/metadata.xsd">
     <metadata-model namespace="sdbmtsample"
                     root-package="com.haulmont.sdbmtsample">
-        <class>com.haulmont.sdbmtsample.entity.system.ExtUserSessionEntity</class>
+
     </metadata-model>
 </metadata>

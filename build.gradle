@@ -1,6 +1,6 @@
 
 buildscript {
-    ext.cubaVersion = '6.9.3'
+    ext.cubaVersion = '6.10.2'
     repositories {
         
         mavenLocal()
@@ -44,7 +44,7 @@ cuba {
 
 dependencies {
     appComponent("com.haulmont.cuba:cuba-global:$cubaVersion")
-    appComponent("com.haulmont.addon.sdbmt:sdbmt-global:1.1.0")
+    appComponent("com.haulmont.addon.sdbmt:sdbmt-global:1.2.0")
 
 }
 
@@ -71,7 +71,9 @@ configure([globalModule, coreModule, guiModule, webModule]) {
 }
 
 configure(globalModule) {
-    task enhance(type: CubaEnhancing)
+    entitiesEnhancing {
+        main { enabled = true }
+    }
 
     
 }
