@@ -4,5 +4,4 @@
 
     <!-- Annotation-based beans -->
     <context:component-scan base-package="com.haulmont.sdbmtsample"/>
-    <bean id="cuba_UserSessions" class="com.haulmont.addon.sdbmt.security.app.SdbmtUserSessions"/>
 </beans>

@@ -5,7 +5,7 @@ import javax.persistence.Table;
 import javax.persistence.Column;
 
 import com.haulmont.chile.core.annotations.NamePattern;
-import com.haulmont.addon.sdbmt.entity.StandardTenantEntity;
+import com.haulmont.cuba.core.entity.StandardTenantEntity;
 
 @NamePattern("%s|name")
 @Table(name = "SDBMTSAMPLE_STORE")
