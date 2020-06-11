@@ -1,6 +1,5 @@
-
 buildscript {
-    ext.cubaVersion = '7.1.0'
+    ext.cubaVersion = '7.2.4'
     repositories {
 
         mavenLocal()
@@ -21,7 +20,7 @@ buildscript {
                 password(rootProject.hasProperty('repoPass') ? rootProject['repoPass'] : 'cuba123')
             }
         }
-        
+
     }
     dependencies {
         classpath "com.haulmont.gradle:cuba-plugin:$cubaVersion"
@@ -53,7 +52,7 @@ cuba {
 
 dependencies {
     appComponent("com.haulmont.cuba:cuba-global:$cubaVersion")
-    appComponent("com.haulmont.addon.sdbmt:sdbmt-global:1.4-SNAPSHOT")
+    appComponent('com.haulmont.addon.sdbmt:sdbmt-global:2.0.2')
 
 }
 
@@ -89,7 +88,7 @@ configure(globalModule) {
         main { enabled = true }
     }
 
-    
+
 }
 
 configure(coreModule) {
@@ -123,20 +122,14 @@ configure(coreModule) {
         appJars(modulePrefix + '-global', modulePrefix + '-core')
     }
 
-    task createDb(dependsOn: assembleDbScripts, description: 'Creates local database', type: CubaDbCreation) {
-        dbms = 'hsql'
-        host = 'localhost'
+    task startDb(type: CubaHsqlStart) {
         dbName = 'sdbmtsample'
-        dbUser = 'sa'
-        dbPassword = ''
+    }
+
+    task createDb(dependsOn: assembleDbScripts, description: 'Creates local database', type: CubaDbCreation) {
     }
 
     task updateDb(dependsOn: assembleDbScripts, description: 'Updates local database', type: CubaDbUpdate) {
-        dbms = 'hsql'
-        host = 'localhost'
-        dbName = 'sdbmtsample'
-        dbUser = 'sa'
-        dbPassword = ''
     }
 }
 
@@ -163,7 +156,7 @@ configure(webModule) {
         compile(guiModule)
 
     }
-    
+
     task webArchive(type: Zip) {
         from file("$buildDir/web")
         from file('web')
@@ -201,9 +194,6 @@ configure(webModule) {
         appJars(modulePrefix + '-global', modulePrefix + '-gui', modulePrefix + '-web')
     }
 }
-
-
-
 
 
 task undeploy(type: Delete, dependsOn: ":${modulePrefix}-web:cleanConf") {

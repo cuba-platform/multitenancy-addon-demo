@@ -3,9 +3,6 @@
              version="2.0">
     <persistence-unit name="singledb-multitenancy"
                       transaction-type="RESOURCE_LOCAL">
-        <class>com.haulmont.sdbmtsample.entity.system.ExtUserRole</class>
-        <class>com.haulmont.sdbmtsample.entity.system.ExtRole</class>
         <class>com.haulmont.sdbmtsample.entity.Store</class>
-        <class>com.haulmont.sdbmtsample.entity.system.ExtFilterEntity</class>
     </persistence-unit>
 </persistence>
